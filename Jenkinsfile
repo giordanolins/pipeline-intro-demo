@@ -4,7 +4,7 @@ pipeline {
     stage('Fluffy Test') {
       agent any
       steps {
-        echo 'Test Step'
+        echo 'I am a ${BUZZ_NAME}'
       }
     }
 
@@ -15,5 +15,8 @@ pipeline {
       }
     }
 
+  }
+  environment {
+    BUZZ_NAME = 'Worker Bee'
   }
 }
