@@ -4,7 +4,7 @@ pipeline {
     stage('Fluffy Test') {
       agent any
       steps {
-        bat 'echo "I am a ${BUZZ_NAME}"'
+        bat 'echo %BUZZ_NAME%'
       }
     }
 
