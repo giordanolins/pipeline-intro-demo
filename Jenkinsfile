@@ -15,5 +15,12 @@ pipeline {
       }
     }
 
+    stage('Aloha') {
+      agent any
+      steps {
+        echo 'Aloha'
+      }
+    }
+
   }
 }
