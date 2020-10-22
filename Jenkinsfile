@@ -4,7 +4,7 @@ pipeline {
     stage('Fluffy Test') {
       agent any
       steps {
-        bat 'echo %BUZZ_NAME%'
+        echo env.BUZZ_NAME
       }
     }
 
