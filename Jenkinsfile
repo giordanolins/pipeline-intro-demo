@@ -9,9 +9,26 @@ pipeline {
     }
 
     stage('Fluffy Deploy') {
-      agent any
-      steps {
-        echo 'Placeholder'
+      parallel {
+        stage('Fluffy Deploy') {
+          agent any
+          steps {
+            echo 'Placeholder'
+          }
+        }
+
+        stage('parallel 1') {
+          steps {
+            echo 'Parallel'
+          }
+        }
+
+        stage('parallel 2') {
+          steps {
+            echo 'Parallel 2'
+          }
+        }
+
       }
     }
 
